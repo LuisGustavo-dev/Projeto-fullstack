@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Página user</title>
+        <title>Página Messages</title>
       </Head>
       <div>
-        <h1>User</h1>
+        <h1>Mensagens</h1>
       </div>
     </>
   )

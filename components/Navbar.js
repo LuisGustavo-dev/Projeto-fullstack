@@ -2,80 +2,70 @@ import styles from '../styles/Navbar.module.css'
 import Link from 'next/Link'
 import Image from 'next/Image'
 import { 
-  FiMenu,
-  FiGrid,
+  FiHome,
+  FiCode,
+  FiServer,
+  FiMessageSquare,
   FiUser,
-  FiType,
-  FiClipboard,
-  FiFile,
+  FiSettings,
   FiLogOut,
-  FiGithub,
 } from 'react-icons/fi';
-import { useEffect } from 'react';
 
 export default function Navbar() {
-
-  useEffect(() => {
-    let btn = document.querySelector('#btn');
-    let sidebar = document.querySelector('.sidebar');
-  
-    btn.onclick = function() {
-      sidebar.classList.toggle('active');
-    }
-  }, []);
 
   return (
       <div className={styles.sidebar}>
         <div className={styles.logo_content}>
-          <FiGithub className={styles.logo_icon} />
           <div className={styles.logo}>Projetinho</div>
-          <FiMenu className={styles.btn} id='btn'/>
         </div>
         <ul className='nav_list'>
           <li>
             <Link href='/'>
               <a>
-                <FiGrid className={styles.icon} />
-                <span className='links_name'>Dashboard</span>
+                <FiHome className={styles.icon} />
+                <span className='links_name'>Home</span>
               </a>
             </Link>
-            {/* <span className={styles.tooltip}>Dashboard</span> */}
           </li>
           <li>
-            <Link href='/user'>
+            <Link href='/books'>
               <a>
-                <FiUser className={styles.icon} />
-                <span className='links_name'>User</span>
+                <FiCode className={styles.icon} />
+                <span className='links_name'>Crud</span>
               </a>
             </Link>
-            {/* <span className={styles.tooltip}>User</span> */}
           </li>
           <li>
-            <Link href='/'>
+            <Link href='/control'>
               <a>
-                <FiType className={styles.icon} />
+                <FiServer className={styles.icon} />
+                <span className='links_name'>Control</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href='/messages'>
+              <a>
+                <FiMessageSquare className={styles.icon} />
                 <span className='links_name'>Messages</span>
               </a>
             </Link>
-            {/* <span className={styles.tooltip}>Messages</span> */}
           </li>
           <li>
-            <Link href='/'>
+            <Link href='/team'>
               <a>
-                <FiClipboard className={styles.icon} />
-                <span className='links_name'>Analytics</span>
+                <FiUser className={styles.icon} />
+                <span className='links_name'>Team</span>
               </a>
             </Link>
-            {/* <span className={styles.tooltip}>Analytics</span> */}
           </li>
           <li>
-            <Link href='/'>
+            <Link href='/settings'>
               <a>
-                <FiFile className={styles.icon} />
-                <span className='links_name'>File Manager</span>
+                <FiSettings className={styles.icon} />
+                <span className='links_name'>Settings</span>
               </a>
             </Link>
-            {/* <span className={styles.tooltip}>Files</span> */}
           </li>
         </ul>
         <div className={styles.profile_content}>
@@ -92,7 +82,11 @@ export default function Navbar() {
                 <div className={styles.job}>Desenvolvedor Web</div>
               </div>    
             </div>
-            <FiLogOut className={styles.log_out}/>
+            <Link href="/">
+              <a>
+                <FiLogOut className={styles.log_out}/>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
