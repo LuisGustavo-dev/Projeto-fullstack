@@ -7,10 +7,13 @@
   width: auto;
   height: 100%;
 
-  margin: 20px;
+  margin: 5px;
 }
 
 .container h1 {
-  padding: 20px;
   font-size: 35px;
+}
+
+.container h2 {
+  font-size: 25px;
 }

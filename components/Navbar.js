@@ -28,7 +28,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href='/books'>
+            <Link href='/list'>
               <a>
                 <FiCode className={styles.icon} />
                 <span className='links_name'>Crud</span>

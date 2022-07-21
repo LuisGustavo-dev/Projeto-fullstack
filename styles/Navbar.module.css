@@ -42,7 +42,6 @@
     height: 20px;
     min-width: 20px;
     margin: 10px 20px;
-    /* border-radius: 12px; */
     line-height: 50px;
     text-align: center;
 }
@@ -112,7 +111,7 @@
 .profile .log_out {
     position: absolute;
     left: 88%;
-    bottom: 35px;
+    bottom: 18px;
     transform: translateX(-50%);
     min-width: 50px;
     line-height: 50px;
