@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Head from 'next/Head'
 import styles from '../../styles/List.module.css'
 import { 
@@ -14,6 +14,9 @@ import {
   Td,
   TableContainer,
 } from '@chakra-ui/react'
+
+// const URL_API = 'http://localhost:3333/clients'
+
 import {InputForm} from '../components/input'
 
 export default function List() {
@@ -26,6 +29,7 @@ export default function List() {
   const [email, setEmail] = useState('')
 
   const [errors, setErrors] = useState({name: null, email: null})
+  
 
   const isValidFormData = () => {
     if(!name) {
@@ -94,7 +98,7 @@ export default function List() {
   const toggleFormState = () => {
     setIsFormOpen(!isFormOpen)  
   }
-  
+
   return (
     <>
       <Head>
@@ -107,7 +111,7 @@ export default function List() {
           <Text color="black" fontSize="2xl">Lista de clientes</Text>
           <Button colorScheme="blue" onClick={toggleFormState}>{isFormOpen ? "-" : "+"}</Button>
         </Flex>
-
+    
       { isFormOpen && (
         <VStack marginY="1rem" as="form" onSubmit={id ? handleSubmitUpdateClient : handleSubmitCreateClient}>
         <InputForm 

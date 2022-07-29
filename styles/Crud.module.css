@@ -1,0 +1,6 @@
+.container {
+    width: calc( 100% - 45em ); /* 240 */
+    float: right;
+    margin: 0px 240px; 
+  }
+   
